@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    background: #333;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    background: #222;
+    color: #fff;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+/* CSS Grid for Button Alignment */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 18px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    background: #e0e0e0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #d4d4d4;
+}
+
+.btn-operator {
+    background: #ff9500;
+    color: white;
+}
+
+.btn-operator:hover {
+    background: #e08400;
+}
+
+.btn-equal {
+    grid-row: span 2;
+    height: 100%;
+    background: #28a745;
+    color: white;
+}
+
+.btn-equal:hover {
+    background: #218838;
+}
+
+.btn-zero {
+    grid-column: span 2;
+}
