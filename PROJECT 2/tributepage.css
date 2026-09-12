@@ -1,0 +1,186 @@
+/* Reset & Force Single Viewport Height */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh; /* Lock page to exactly 100% viewport height */
+    overflow: hidden; /* Disable page scrolling */
+    background-color: #0f172a;
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    width: 95%;
+    max-width: 1100px;
+    height: 94vh; /* Fits comfortably inside screen without overflowing */
+    background: #1e293b;
+    padding: 20px 30px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header */
+.header {
+    text-align: center;
+}
+
+#title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.2rem;
+    color: #f8fafc;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #38bdf8;
+    font-weight: 500;
+}
+
+/* Content Layout (Split View for Space Optimization) */
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin: 15px 0;
+}
+
+/* Image Column */
+#img-div {
+    flex: 0 0 260px;
+    background-color: #0f172a;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    text-align: center;
+}
+
+#image {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#img-caption {
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* Content / Cards Column */
+#tribute-info {
+    flex: 1;
+}
+
+#tribute-info h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    color: #f1f5f9;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 4px;
+}
+
+/* Compact Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.card {
+    background-color: #0f172a;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    border-color: #38bdf8;
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.card-year {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #38bdf8;
+    display: block;
+}
+
+.card h3 {
+    font-size: 0.9rem;
+    color: #f8fafc;
+    margin: 2px 0;
+}
+
+.card p {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    line-height: 1.3;
+}
+
+/* Quote Section */
+.quote {
+    background-color: #0f172a;
+    border-left: 3px solid #38bdf8;
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+}
+
+.quote p {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #f1f5f9;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding-top: 8px;
+    border-top: 1px solid #334155;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+#tribute-link {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#tribute-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Handling */
+@media (max-width: 850px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #img-div {
+        flex: 0 0 auto;
+        display: none;
+    }
+}
